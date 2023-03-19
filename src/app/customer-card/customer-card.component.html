@@ -1,0 +1,24 @@
+<a routerLink="/details/{{ customer?.id }}">
+  <div
+    class="max-w-xs w-80 h-44 rounded-md shadow-lg flex flex-col items-center justify-start m-5 border-2 p-5 hover:bg-slate-200 hover:cursor-pointer transition-all"
+  >
+    <div class="w-16 h-16 rounded-full overflow-hidden">
+      <img
+        class="w-16 h-16"
+        *ngIf="customer?.gender == 'Male'"
+        src="https://coloradotechnology.org/wp-content/uploads/2020/01/Blank-Man-3.jpg"
+      />
+      <img
+        class="w-16 h-16"
+        *ngIf="customer?.gender != 'Male'"
+        src="https://th.bing.com/th/id/R.2fd378bfcdd3c7b783cddc07817aeab0?rik=9bKGmUsXZeRgUA&riu=http%3a%2f%2fwww.hausmaninger-kletter.com%2fwp-content%2fuploads%2f2017%2f02%2fnoimage.jpg&ehk=orwcjv96X6nhQbErklLdUusqR71dNYAtXnaKxubdBYw%3d&risl=&pid=ImgRaw&r=0"
+      />
+    </div>
+    <div class="ml-3">
+      <p class="font-bold text-xl text-center text-gray-800">
+        {{ customer?.firstName + " " + customer?.lastName }}
+      </p>
+      <p class="text-center">{{ customer?.email }}</p>
+    </div>
+  </div>
+</a>

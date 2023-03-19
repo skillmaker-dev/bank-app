@@ -1,0 +1,38 @@
+<div
+  class="min-w-fit w-1/2 mx-auto mt-10 border-gray-500 p-5 flex-wrap shadow-lg rounded-md h-fit bg-white flex"
+>
+  <div class="w-32 h-32 rounded-full overflow-hidden mr-10">
+    <img
+      class="w-32 h-32"
+      *ngIf="customer?.gender == 'Male'"
+      src="https://coloradotechnology.org/wp-content/uploads/2020/01/Blank-Man-3.jpg"
+    />
+    <img
+      class="w-32 h-32"
+      *ngIf="customer?.gender != 'Male'"
+      src="https://th.bing.com/th/id/R.2fd378bfcdd3c7b783cddc07817aeab0?rik=9bKGmUsXZeRgUA&riu=http%3a%2f%2fwww.hausmaninger-kletter.com%2fwp-content%2fuploads%2f2017%2f02%2fnoimage.jpg&ehk=orwcjv96X6nhQbErklLdUusqR71dNYAtXnaKxubdBYw%3d&risl=&pid=ImgRaw&r=0"
+    />
+  </div>
+  <div>
+    <p class="font-bold text-xl text-gray-500 mb-5">
+      {{ customer?.firstName }} {{ customer?.lastName }}
+    </p>
+    <p><b>Gender:</b> {{ customer?.gender }}</p>
+    <p><b>Email:</b> {{ customer?.email }}</p>
+    <p><b>Address:</b> {{ customer?.email }}</p>
+    <div class="flex justify-start w-52 mt-5">
+      <button
+        routerLink="/edit/{{ customer?.id }}"
+        class="py-1 px-4 mr-4 hover:bg-green-500 transition-all bg-green-600 rounded-md text-white"
+      >
+        Edit
+      </button>
+      <button
+        (click)="deleteCustomer()"
+        class="py-1 px-4 border border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all rounded-md"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

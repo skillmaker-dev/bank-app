@@ -1,0 +1,75 @@
+<div class="mt-10">
+  <p *ngIf="isCreate" class="text-lg font-bold mb-5">Create a new Customer</p>
+  <p *ngIf="!isCreate" class="text-lg font-bold mb-5">Edit Customer:</p>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    class="flex flex-col w-96 p-5 border-2 rounded-md shadow-xl"
+  >
+    <label class="font-semibold" for="firstname">FirstName: </label>
+    <input
+      class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
+      type="text"
+      formControlName="firstname"
+      [value]="form.value.firstname"
+      id="firstname"
+    />
+    <label class="font-semibold" for="lastname">LastName: </label>
+    <input
+      class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
+      type="text"
+      formControlName="lastname"
+      id="lastname"
+    />
+    <label class="font-semibold" for="attack">Email: </label>
+    <input
+      type="email"
+      class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
+      formControlName="email"
+      id="email"
+    />
+    <label class="font-semibold" for="address">Address: </label>
+    <textarea
+      class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
+      id="address"
+      formControlName="address"
+    ></textarea>
+    <div class="flex items-center mb-5 mt-2">
+      <label class="inline-flex items-center mr-6">
+        <input
+          type="radio"
+          class="form-radio text-indigo-600"
+          formControlName="gender"
+          value="Male"
+        />
+        <span class="ml-2">Male</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input
+          type="radio"
+          class="form-radio text-pink-600"
+          formControlName="gender"
+          value="Female"
+        />
+        <span class="ml-2">Female</span>
+      </label>
+    </div>
+
+    <button
+      class="rounded-md bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 transition-all"
+      type="submit"
+    >
+      {{ isLoading ? "" : "Save" }}
+      <div
+        *ngIf="isLoading"
+        class="inline-block h-5 w-5 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status"
+      >
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Loading...</span
+        >
+      </div>
+    </button>
+  </form>
+</div>
