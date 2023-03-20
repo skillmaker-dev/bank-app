@@ -1,25 +1,25 @@
-<div class="mt-10">
+<div class="mt-10 mb-20">
   <p *ngIf="isCreate" class="text-lg font-bold mb-5">Create a new Customer</p>
   <p *ngIf="!isCreate" class="text-lg font-bold mb-5">Edit Customer:</p>
   <form
     [formGroup]="form"
     (ngSubmit)="onSubmit()"
-    class="flex flex-col w-96 p-5 border-2 rounded-md shadow-xl"
+    class="flex flex-col w-96 h-fit p-5 border-2 rounded-md shadow-xl"
   >
     <label class="font-semibold" for="firstname">FirstName: </label>
     <input
       class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
       type="text"
-      formControlName="firstname"
-      [value]="form.value.firstname"
-      id="firstname"
+      formControlName="firstName"
+      [value]="form.value.firstName"
+      id="firstName"
     />
     <label class="font-semibold" for="lastname">LastName: </label>
     <input
       class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
       type="text"
-      formControlName="lastname"
-      id="lastname"
+      formControlName="lastName"
+      id="lastName"
     />
     <label class="font-semibold" for="attack">Email: </label>
     <input
@@ -35,6 +35,7 @@
       formControlName="address"
     ></textarea>
     <div class="flex items-center mb-5 mt-2">
+      <label class="mr-4 font-bold text-gray-700">Gender:</label>
       <label class="inline-flex items-center mr-6">
         <input
           type="radio"
@@ -54,6 +55,37 @@
         <span class="ml-2">Female</span>
       </label>
     </div>
+
+    <div class="flex items-center mb-5 mt-2">
+      <label class="mr-4 font-bold text-gray-700">Account Type:</label>
+      <label class="inline-flex items-center mr-6">
+        <input
+          type="radio"
+          class="form-radio text-blue-600"
+          formControlName="accountType"
+          value="Savings"
+        />
+        <span class="ml-2">Savings</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input
+          type="radio"
+          class="form-radio text-green-600"
+          formControlName="accountType"
+          value="Checking"
+        />
+        <span class="ml-2">Checking</span>
+      </label>
+    </div>
+
+    <label class="font-semibold" for="balance">Balance: </label>
+    <input
+      class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
+      type="number"
+      min="0"
+      formControlName="balance"
+      id="balance"
+    />
 
     <button
       class="rounded-md bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 transition-all"

@@ -4,25 +4,31 @@
       "id": "2da6cbc8-3240-4bc8-b31c-60f62564fe37",
       "firstName": "Reagan",
       "lastName": "Courtese",
-      "email": "rcourtese0@clickbank.net",
       "gender": "Male",
-      "address": "886 Barby Point"
+      "email": "rcourtese0@clickbank.net",
+      "address": "886 Barby Point",
+      "accountType": "Savings",
+      "balance": 500
     },
     {
       "id": "ca32646f-e09e-462d-b1e5-76cd9eb16d87",
       "firstName": "Charla",
       "lastName": "Courteney",
+      "gender": "Female",
       "email": "ccourteney2@nih.gov",
-      "gender": "Genderfluid",
-      "address": "37 Dapin Point"
+      "address": "37 Dapin Point",
+      "accountType": "Checking",
+      "balance": 0
     },
     {
       "id": "7578e374-6dac-4410-9cfb-ef0ef1abb89d",
       "firstName": "Bogey",
       "lastName": "Stothard",
-      "email": "bstothard3@theatlantic.com",
       "gender": "Male",
-      "address": "58 Pleasure Point"
+      "email": "bstothard3@theatlantic.com",
+      "address": "58 Pleasure Point",
+      "accountType": "Savings",
+      "balance": 50
     },
     {
       "id": "0074b69f-911e-4c79-b8bb-dbac982f5e1f",
@@ -30,23 +36,29 @@
       "lastName": "Roston",
       "email": "troston4@ox.ac.uk",
       "gender": "Male",
-      "address": "734 Fairview Center"
+      "address": "734 Fairview Center",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "98ea2b1b-e25f-47d9-b5c5-8c8b2b9199f4",
       "firstName": "Felicity",
       "lastName": "Dayton",
-      "email": "fdayton5@sohu.com",
       "gender": "Female",
-      "address": "27553 Coleman Street"
+      "email": "fdayton5@sohu.com",
+      "address": "27553 Coleman Street",
+      "accountType": "Savings",
+      "balance": 40
     },
     {
       "id": "a6d48d15-4db1-47e5-9d33-f8545f4a6462",
       "firstName": "Louella",
       "lastName": "Felder",
-      "email": "lfelder6@macromedia.com",
       "gender": "Female",
-      "address": "3 American Ash Terrace"
+      "email": "lfelder6@macromedia.com",
+      "address": "3 American Ash Terrace",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "01a1e4e1-5e8a-4669-a4cb-03782bf30d7b",
@@ -54,7 +66,9 @@
       "lastName": "Bendon",
       "email": "abendon7@e-recht24.de",
       "gender": "Female",
-      "address": "5 Loomis Terrace"
+      "address": "5 Loomis Terrace",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "0126e908-e7c5-40b3-8667-a40ade36eccb",
@@ -62,7 +76,9 @@
       "lastName": "Bischoff",
       "email": "sbischoff8@chicagotribune.com",
       "gender": "Female",
-      "address": "6239 Alpine Trail"
+      "address": "6239 Alpine Trail",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "67417258-560d-4467-bba4-c996d26abdab",
@@ -70,7 +86,9 @@
       "lastName": "Glaister",
       "email": "dglaister9@irs.gov",
       "gender": "Female",
-      "address": "05239 Melvin Trail"
+      "address": "05239 Melvin Trail",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "6ac848d6-05bf-4e69-ad67-86534107247c",
@@ -78,7 +96,9 @@
       "lastName": "Lynock",
       "email": "llynocka@time.com",
       "gender": "Male",
-      "address": "807 Montana Way"
+      "address": "807 Montana Way",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "6898a1b5-a105-4eb1-a5a6-c8307c969677",
@@ -86,7 +106,9 @@
       "lastName": "Glinde",
       "email": "rglindeb@virginia.edu",
       "gender": "Male",
-      "address": "956 Mifflin Alley"
+      "address": "956 Mifflin Alley",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "6a62a8f0-ccaa-491c-bbfe-90ba01c69c74",
@@ -94,7 +116,9 @@
       "lastName": "Duchenne",
       "email": "cduchennec@lulu.com",
       "gender": "Male",
-      "address": "3238 Lien Avenue"
+      "address": "3238 Lien Avenue",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "54f7ce20-e282-4d4f-85c0-9982bf9e081f",
@@ -102,7 +126,9 @@
       "lastName": "Maffeo",
       "email": "kmaffeod@altervista.org",
       "gender": "Female",
-      "address": "17 Judy Parkway"
+      "address": "17 Judy Parkway",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "05e29be3-1986-4b58-95b9-1abdeb910737",
@@ -110,7 +136,9 @@
       "lastName": "Yurukhin",
       "email": "dyurukhine@archive.org",
       "gender": "Female",
-      "address": "64 Manley Parkway"
+      "address": "64 Manley Parkway",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "6bdbbe6f-2089-4cba-a030-637756b2ddd7",
@@ -118,7 +146,9 @@
       "lastName": "Yurkevich",
       "email": "eyurkevichf@nps.gov",
       "gender": "Female",
-      "address": "03 Dennis Hill"
+      "address": "03 Dennis Hill",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "ef2c4d4d-4b33-46e5-8e8e-cd12296ac14c",
@@ -126,7 +156,9 @@
       "lastName": "Keitley",
       "email": "mkeitleyg@godaddy.com",
       "gender": "Female",
-      "address": "9445 Mandrake Way"
+      "address": "9445 Mandrake Way",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "bf96a22e-ab77-4fed-9eb0-221ceba9f4ae",
@@ -134,7 +166,9 @@
       "lastName": "Hanny",
       "email": "rhannyh@prlog.org",
       "gender": "Male",
-      "address": "76264 Bluejay Alley"
+      "address": "76264 Bluejay Alley",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "d86c7cf9-fbaf-443d-bb94-c34c5d87359c",
@@ -142,7 +176,9 @@
       "lastName": "Fidgeon",
       "email": "gfidgeoni@indiegogo.com",
       "gender": "Male",
-      "address": "42727 Ryan Court"
+      "address": "42727 Ryan Court",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "0baa41e1-cc21-4a8d-b85a-e4abbe96495e",
@@ -150,7 +186,9 @@
       "lastName": "Ireson",
       "email": "giresonj@ask.com",
       "gender": "Non-binary",
-      "address": "75 Sauthoff Court"
+      "address": "75 Sauthoff Court",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "0c0d59ce-7b8b-4c62-b0b1-2caad8db91ca",
@@ -158,7 +196,9 @@
       "lastName": "O'Dee",
       "email": "dodeek@bigcartel.com",
       "gender": "Agender",
-      "address": "03 Old Shore Drive"
+      "address": "03 Old Shore Drive",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "e7f038f6-2624-491d-ac8f-d743ad3ac097",
@@ -166,7 +206,9 @@
       "lastName": "Alleyne",
       "email": "aalleynel@cbsnews.com",
       "gender": "Genderfluid",
-      "address": "4 Oneill Hill"
+      "address": "4 Oneill Hill",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "ed137d8d-87e0-4ed2-8d76-7ac58e16166f",
@@ -174,7 +216,9 @@
       "lastName": "Skilbeck",
       "email": "jskilbeckm@godaddy.com",
       "gender": "Male",
-      "address": "17340 Towne Center"
+      "address": "17340 Towne Center",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "749ea490-4710-48ae-b6a5-9a9cbdbaaa03",
@@ -182,7 +226,9 @@
       "lastName": "Murphy",
       "email": "bmurphyn@fema.gov",
       "gender": "Female",
-      "address": "2293 Farragut Trail"
+      "address": "2293 Farragut Trail",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "afb56e94-4f51-4902-a785-379af91db426",
@@ -190,7 +236,9 @@
       "lastName": "Kinghorne",
       "email": "tkinghorneo@altervista.org",
       "gender": "Male",
-      "address": "324 Corry Court"
+      "address": "324 Corry Court",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "17398480-adcf-4b7c-ae3c-9748a0618f45",
@@ -198,7 +246,9 @@
       "lastName": "Jensen",
       "email": "sjensenp@nifty.com",
       "gender": "Female",
-      "address": "14 Calypso Hill"
+      "address": "14 Calypso Hill",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "f4ae2202-4106-4ca1-9d43-c7faef4a48a8",
@@ -206,7 +256,9 @@
       "lastName": "Hatherall",
       "email": "phatherallq@tripod.com",
       "gender": "Female",
-      "address": "5 Scoville Hill"
+      "address": "5 Scoville Hill",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "1a10257c-9ea4-42b6-adec-1700abf84458",
@@ -214,7 +266,9 @@
       "lastName": "Devonish",
       "email": "gdevonishr@uiuc.edu",
       "gender": "Female",
-      "address": "9299 Erie Junction"
+      "address": "9299 Erie Junction",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "829faa61-7264-446b-96ef-47f26c037fb4",
@@ -222,7 +276,9 @@
       "lastName": "Town",
       "email": "dtowns@e-recht24.de",
       "gender": "Male",
-      "address": "69915 Messerschmidt Circle"
+      "address": "69915 Messerschmidt Circle",
+      "accountType": "Savings",
+      "balance": 0
     },
     {
       "id": "a0299050-7a99-4eab-8d42-d0bce08f0e85",
@@ -230,7 +286,19 @@
       "lastName": "Gallier",
       "email": "vgalliert@blog.com",
       "gender": "Male",
-      "address": "3 Anniversary Court"
+      "address": "3 Anniversary Court",
+      "accountType": "Savings",
+      "balance": 0
+    },
+    {
+      "id": "b0721cf8-135b-4c3c-8d4d-853a22d83c28",
+      "firstName": "Anas",
+      "lastName": "Chahid",
+      "gender": "Male",
+      "email": "anas.chahid777@gmail.com",
+      "address": "3 American Ash Terrace",
+      "accountType": "Savings",
+      "balance": 0
     }
   ]
 }

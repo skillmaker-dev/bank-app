@@ -28,4 +28,16 @@ export class CustomersService {
   {
     return this.http.delete<Customer>(`${API_URL}/${id}`);
   }
+
+  createCustomer(customer : Customer) : Observable<Customer>
+  {
+    customer.id = self.crypto.randomUUID()
+    return this.http.post<Customer>(API_URL, customer);
+  }
+
+  updateCustomer(customer : Customer) : Observable<Customer>
+  {
+    return this.http.put<Customer>(`${API_URL}/${customer.id}`, customer);
+  }
+
 }

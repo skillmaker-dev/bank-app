@@ -1,16 +1,36 @@
 <nav class="w-screen bg-white shadow-xl h-fit p-5">
   <ul class="flex flex-row justify-start">
     <li class="mr-5 hover:translate-y-1 hover:text-gray-400 transition-all">
-      <a routerLink="/">Dashboard</a>
+      <a
+        routerLink="/"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-gray-500 underline underline-offset-4"
+        >Dashboard</a
+      >
     </li>
     <li class="mr-5 hover:translate-y-1 hover:text-gray-400 transition-all">
-      <a routerLink="list">Customers</a>
+      <a
+        routerLink="list"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-gray-500 underline underline-offset-4"
+        >Customers</a
+      >
     </li>
     <li class="mr-5 hover:translate-y-1 hover:text-gray-400 transition-all">
-      <a routerLink="">Create</a>
+      <a
+        routerLink="create"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-gray-500 underline underline-offset-4"
+        >Create</a
+      >
     </li>
     <li class="mr-5 hover:translate-y-1 hover:text-gray-400 transition-all">
-      <a routerLink="about">About</a>
+      <a
+        routerLink="about"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-gray-500 underline underline-offset-4"
+        >About</a
+      >
     </li>
   </ul>
 </nav>

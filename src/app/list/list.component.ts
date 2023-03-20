@@ -16,7 +16,6 @@ constructor(private customersService : CustomersService) {}
 ngOnInit()
 {
   this.getAllCustomers()
-  console.log(this.customers)
 }
 
 searchByName(term : string)

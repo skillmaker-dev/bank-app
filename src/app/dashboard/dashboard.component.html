@@ -1,1 +1,27 @@
-<p>dashboard works!</p>
+<div class="flex flex-row p-10 flex-wrap justify-center items-center">
+  <div
+    routerLink="/list"
+    class="w-72 hover:cursor-pointer hover:scale-105 transition-all h-72 mt-3 bg-sky-200 rounded-md mr-5 shadow-lg flex flex-col justify-center items-center"
+  >
+    <div class="w-32 h-32 rounded-full overflow-hidden mb-5">
+      <img
+        class="w-32 h-32"
+        src="https://coloradotechnology.org/wp-content/uploads/2020/01/Blank-Man-3.jpg"
+      />
+    </div>
+    <p>Number of Customers:</p>
+    <p class="font-bold text-4xl">{{ numberOfCustomers }}</p>
+  </div>
+
+  <div
+    class="w-72 h-72 bg-green-200 rounded-md mt-3 mr-5 shadow-lg flex flex-col justify-center items-center"
+  >
+    <img
+      class="h-32"
+      src="https://th.bing.com/th/id/R.cd10f19733307c61da0186c7c917ffb9?rik=XgM1Dbfil0TpAw&riu=http%3a%2f%2fcliparts.co%2fcliparts%2f6Tp%2f6RE%2f6Tp6REGnc.png&ehk=eIVIk%2bU%2bheL5zNORBRLBCN%2f7g6TJah2bRxlcEYBh2HU%3d&risl=&pid=ImgRaw&r=0"
+    />
+
+    <p>Total balance:</p>
+    <p class="font-bold text-4xl">{{ totalBalance | currency }}</p>
+  </div>
+</div>
