@@ -1,27 +1,42 @@
 <div
-  class="min-w-fit w-1/2 border mx-auto mt-10 border-gray-100 p-5 flex-wrap shadow-lg rounded-md h-fit bg-white flex"
+  class="min-w-fit w-1/2 border mx-auto mt-10 border-gray-100 flex-wrap shadow-lg rounded-md h-fit bg-white flex"
 >
-  <div class="w-32 h-32 border rounded-full overflow-hidden mr-10">
-    <img
-      class="w-32 h-32"
-      *ngIf="customer?.gender == 'Male'"
-      src="../../assets/Male.jpg"
-    />
-    <img
-      class="w-32 h-32"
-      *ngIf="customer?.gender != 'Male'"
-      src="../../assets/Female.jfif"
-    />
-  </div>
-  <div>
-    <p class="font-bold text-xl text-gray-500 mb-5">
+  <div
+    class="w-52 flex flex-col bg-gradient-to-b from-slate-700 to-sky-900 text-white justify-center items-center"
+  >
+    <div class="w-32 h-32 border rounded-full overflow-hidden">
+      <img
+        class="w-32 h-32"
+        *ngIf="customer?.gender == 'Male'"
+        src="../../assets/Male.jpg"
+      />
+      <img
+        class="w-32 h-32"
+        *ngIf="customer?.gender != 'Male'"
+        src="../../assets/Female.jfif"
+      />
+    </div>
+    <p class="font-bold text-xl mt-3 mb-5">
       {{ customer?.firstName }} {{ customer?.lastName }}
     </p>
-    <p><b>Gender:</b> {{ customer?.gender }}</p>
-    <p><b>Email:</b> {{ customer?.email }}</p>
-    <p><b>Address:</b> {{ customer?.address }}</p>
-    <p><b>Account type:</b> {{ customer?.accountType }}</p>
-    <p><b>Balance:</b> {{ customer?.balance | currency }}</p>
+  </div>
+  <div class="p-10">
+    <p class="p-3 hover:bg-white bg-slate-50">
+      <b>Gender:</b>
+      {{ customer?.gender }}
+    </p>
+    <p class="p-3 hover:bg-white bg-slate-100">
+      <b>Email:</b> {{ customer?.email }}
+    </p>
+    <p class="p-3 hover:bg-white bg-slate-50">
+      <b>Address:</b> {{ customer?.address }}
+    </p>
+    <p class="p-3 hover:bg-white bg-slate-100">
+      <b>Account type:</b> {{ customer?.accountType }}
+    </p>
+    <p class="p-3 hover:bg-white bg-slate-50">
+      <b>Balance:</b> {{ customer?.balance | currency }}
+    </p>
     <div class="flex justify-start w-52 mt-5">
       <button
         routerLink="/edit/{{ customer?.id }}"

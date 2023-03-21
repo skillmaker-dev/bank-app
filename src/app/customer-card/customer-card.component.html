@@ -1,6 +1,6 @@
 <div routerLink="/details/{{ customer?.id }}">
   <div
-    class="max-w-xs w-80 h-44 rounded-md shadow-lg flex flex-col items-center justify-start border-2 p-5 hover:bg-slate-200 hover:cursor-pointer hover:shadow-2xl transition-all"
+    class="max-w-xs w-80 text-white hover:scale-105 h-44 rounded-md linear-gradient shadow-lg flex flex-col items-center justify-start p-5 hover:bg-slate-200 hover:cursor-pointer hover:shadow-2xl transition-all"
   >
     <div class="w-16 h-16 rounded-full overflow-hidden drop-shadow-lg">
       <img
@@ -15,7 +15,7 @@
       />
     </div>
     <div class="ml-3">
-      <p class="font-bold text-xl text-center text-sky-700">
+      <p class="font-bold text-xl text-center">
         {{ customer?.firstName + " " + customer?.lastName }}
       </p>
       <p class="text-center">{{ customer?.email }}</p>
