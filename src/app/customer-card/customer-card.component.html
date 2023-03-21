@@ -1,8 +1,8 @@
-<a routerLink="/details/{{ customer?.id }}">
+<div routerLink="/details/{{ customer?.id }}">
   <div
-    class="max-w-xs w-80 h-44 rounded-md shadow-lg flex flex-col items-center justify-start m-5 border-2 p-5 hover:bg-slate-200 hover:cursor-pointer transition-all"
+    class="max-w-xs w-80 h-44 rounded-md shadow-lg flex flex-col items-center justify-start border-2 p-5 hover:bg-slate-200 hover:cursor-pointer transition-all"
   >
-    <div class="w-16 h-16 rounded-full overflow-hidden">
+    <div class="w-16 h-16 rounded-full overflow-hidden drop-shadow-lg">
       <img
         class="w-16 h-16"
         *ngIf="customer?.gender == 'Male'"
@@ -15,10 +15,10 @@
       />
     </div>
     <div class="ml-3">
-      <p class="font-bold text-xl text-center text-gray-800">
+      <p class="font-bold text-xl text-center text-sky-700">
         {{ customer?.firstName + " " + customer?.lastName }}
       </p>
       <p class="text-center">{{ customer?.email }}</p>
     </div>
   </div>
-</a>
+</div>

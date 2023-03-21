@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Confirm } from 'notiflix/build/notiflix-confirm-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Customer } from '../models/customer.model';
 import { CustomersService } from '../services/customers.service';
 
@@ -23,7 +25,22 @@ customer? : Customer;
   deleteCustomer()
   {
     this.isLoading = true;
-    this.customersService.deleteCustomerById(this.customer?.id ?? '').subscribe(() => {this.isLoading = false; this.router.navigateByUrl('/list')});
+
+    Confirm.show(
+      'Delete Customer',
+      'Do you really want to delete this customer ?',
+      'Yes',
+      'No',
+      () => {
+        this.customersService.deleteCustomerById(this.customer?.id ?? '').subscribe(() => {this.isLoading = false; Notify.success("Customer successfully deleted!"); this.router.navigateByUrl('/list')});
+      },
+      () => {
+      
+      },
+      {
+      },
+      );
+
   }
 
 }

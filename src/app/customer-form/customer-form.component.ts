@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomersService } from '../services/customers.service';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-customer-form',
@@ -45,7 +46,7 @@ onSubmit()
     if(this.form.valid)
     {  
       this.form.disable()
-      this.customersService.createCustomer(this.form.value).subscribe(() => {this.isLoading = false; this.form.enable(); this.router.navigateByUrl("/list")});
+      this.customersService.createCustomer(this.form.value).subscribe(() => {this.isLoading = false; this.form.enable(); Notify.success("Customer successfully created!"); this.router.navigateByUrl("/list")});
     }
     else {
       this.isLoading = false;
@@ -55,7 +56,7 @@ onSubmit()
     if(this.form.valid)
     {  
       this.form.disable()
-      this.customersService.updateCustomer(this.form.value).subscribe(() => {this.isLoading = false; this.form.enable(); this.router.navigateByUrl("/list")});
+      this.customersService.updateCustomer(this.form.value).subscribe(() => {this.isLoading = false; Notify.success("Customer successfully updated!"); this.form.enable(); this.router.navigateByUrl("/list")});
     }
     else {
       this.isLoading = false;
