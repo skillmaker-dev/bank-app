@@ -16,12 +16,12 @@ export class CustomerFormComponent implements OnInit{
 constructor(private fb : FormBuilder, private route : ActivatedRoute,private customersService: CustomersService, private router : Router) {
   this.form = this.fb.group({
     id : '',
-    firstName: '',
-    lastName : '',
-    gender : '',
-    email: '',
-    address: '',
-    accountType : '',
+    firstName: ['',Validators.required],
+    lastName : ['',Validators.required],
+    gender : ['',Validators.required],
+    email: ['',Validators.required],
+    address: ['',Validators.required],
+    accountType : ['',Validators.required],
     balance: 0
   })
 }
@@ -31,7 +31,7 @@ constructor(private fb : FormBuilder, private route : ActivatedRoute,private cus
     if(!this.isCreate)
     {
       let id = this.route.snapshot.paramMap.get("id");
-      this.customersService.getCustomerById(id ?? '').subscribe(customer => this.form.setValue({...customer}) );
+      this.customersService.getCustomerById(id ?? '').subscribe({next: customer => this.form.setValue({...customer}), error: () => Notify.failure("Could not connect to server") });
       
       
     }
@@ -39,29 +39,38 @@ constructor(private fb : FormBuilder, private route : ActivatedRoute,private cus
 
 onSubmit()
 {
-  this.isLoading = true; 
+  
     
   if(this.isCreate)
   {
     if(this.form.valid)
     {  
+      this.isLoading = true; 
       this.form.disable()
-      this.customersService.createCustomer(this.form.value).subscribe(() => {this.isLoading = false; this.form.enable(); Notify.success("Customer successfully created!"); this.router.navigateByUrl("/list")});
+      this.customersService.createCustomer(this.form.value).subscribe({next: () => {this.isLoading = false; this.form.enable(); Notify.success("Customer successfully created!"); this.router.navigateByUrl("/list")}, error: () => { Notify.failure("Could not connect to server"); this.isLoading = false}});
     }
     else {
       this.isLoading = false;
       this.form.enable();
+      Notify.failure("Please fill all the required fields");
     }
   }else{
     if(this.form.valid)
     {  
+      this.isLoading = true; 
       this.form.disable()
-      this.customersService.updateCustomer(this.form.value).subscribe(() => {this.isLoading = false; Notify.success("Customer successfully updated!"); this.form.enable(); this.router.navigateByUrl("/list")});
+      this.customersService.updateCustomer(this.form.value).subscribe({next: () => {this.isLoading = false; Notify.success("Customer successfully updated!"); this.form.enable(); this.router.navigateByUrl("/list")}, error: () => { Notify.failure("Could not connect to server"); this.isLoading = false}});
     }
     else {
       this.isLoading = false;
       this.form.enable();
+      Notify.failure("Please fill all the required fields");
     }
   }
+}
+
+inputIsInvalid(name : string) : boolean
+{
+  return  (this.form.controls[name].dirty || this.form.controls[name].touched) && this.form.controls[name].invalid;
 }
 }

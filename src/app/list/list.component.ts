@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Notify } from 'notiflix';
 import { BehaviorSubject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Customer } from '../models/customer.model';
 import { CustomersService } from '../services/customers.service';
@@ -25,7 +26,7 @@ searchByName(term : string)
 
 getAllCustomers()
 {
-  this.searchValues.pipe(debounceTime(500),distinctUntilChanged()).subscribe(name =>  this.customersService.getAllCustomers().subscribe(customers => this.customers = customers.filter(p => `${p.firstName} + ${p.lastName}`.toLowerCase().includes(name.toLowerCase()))))
+  this.searchValues.pipe(debounceTime(500),distinctUntilChanged()).subscribe(name =>  this.customersService.getAllCustomers().subscribe({next : customers => this.customers = customers.filter(p => `${p.firstName} + ${p.lastName}`.toLowerCase().includes(name.toLowerCase())), error: () => Notify.failure("Could not connect to server")}))
 }
 
 }

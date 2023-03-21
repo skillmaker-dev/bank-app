@@ -174,11 +174,11 @@
       "id": "d86c7cf9-fbaf-443d-bb94-c34c5d87359c",
       "firstName": "Gabe",
       "lastName": "Fidgeon",
-      "email": "gfidgeoni@indiegogo.com",
       "gender": "Male",
+      "email": "gfidgeoni@indiegogo.com",
       "address": "42727 Ryan Court",
       "accountType": "Savings",
-      "balance": 0
+      "balance": 50
     },
     {
       "id": "0baa41e1-cc21-4a8d-b85a-e4abbe96495e",
@@ -224,8 +224,8 @@
       "id": "749ea490-4710-48ae-b6a5-9a9cbdbaaa03",
       "firstName": "Bette-ann",
       "lastName": "Murphy",
-      "email": "bmurphyn@fema.gov",
       "gender": "Female",
+      "email": "bmurphyn@fema.gov",
       "address": "2293 Farragut Trail",
       "accountType": "Savings",
       "balance": 0

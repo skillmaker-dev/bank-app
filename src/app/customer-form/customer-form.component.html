@@ -14,6 +14,12 @@
       [value]="form.value.firstName"
       id="firstName"
     />
+    <p
+      *ngIf="inputIsInvalid('firstName')"
+      class="text-red-600 px-3 py-2 rounded-md bg-red-200"
+    >
+      Please enter a valid firstname
+    </p>
     <label class="font-semibold" for="lastname">LastName: </label>
     <input
       class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
@@ -21,6 +27,12 @@
       formControlName="lastName"
       id="lastName"
     />
+    <p
+      *ngIf="inputIsInvalid('lastName')"
+      class="text-red-600 px-3 py-2 rounded-md bg-red-200"
+    >
+      Please enter a valid lastname
+    </p>
     <label class="font-semibold" for="attack">Email: </label>
     <input
       type="email"
@@ -28,18 +40,29 @@
       formControlName="email"
       id="email"
     />
+    <p
+      *ngIf="inputIsInvalid('email')"
+      class="text-red-600 px-3 py-2 rounded-md bg-red-200"
+    >
+      Please enter a valid email
+    </p>
     <label class="font-semibold" for="address">Address: </label>
     <textarea
       class="border-2 focus:transition border-gray-200 mt-1 mb-3 outline-sky-600 rounded-md px-3 py-1"
       id="address"
       formControlName="address"
     ></textarea>
+    <p
+      *ngIf="inputIsInvalid('address')"
+      class="text-red-600 px-3 py-2 rounded-md bg-red-200"
+    >
+      Please enter a valid address
+    </p>
     <div class="flex items-center mb-5 mt-2">
       <label class="mr-4 font-bold text-gray-700">Gender:</label>
       <label class="inline-flex items-center mr-6">
         <input
           type="radio"
-          required
           class="form-radio text-indigo-600"
           formControlName="gender"
           value="Male"
@@ -49,7 +72,6 @@
       <label class="inline-flex items-center">
         <input
           type="radio"
-          required
           class="form-radio text-pink-600"
           formControlName="gender"
           value="Female"
@@ -73,7 +95,6 @@
       <label class="inline-flex items-center">
         <input
           type="radio"
-          required
           class="form-radio text-green-600"
           formControlName="accountType"
           value="Checking"
@@ -90,6 +111,12 @@
       formControlName="balance"
       id="balance"
     />
+    <p
+      *ngIf="inputIsInvalid('balance')"
+      class="text-red-600 px-3 py-2 rounded-md bg-red-200"
+    >
+      Please enter a valid balance
+    </p>
 
     <button
       class="rounded-md bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 transition-all"

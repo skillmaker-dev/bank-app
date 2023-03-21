@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { map, reduce } from 'rxjs';
 import { Customer } from '../models/customer.model';
 import { CustomersService } from '../services/customers.service';
@@ -22,18 +23,18 @@ export class DashboardComponent implements OnInit {
 
   getTotalBalance()
   {
-    this.customersService.getAllCustomers().subscribe(c => 
+    this.customersService.getAllCustomers().subscribe({next: c => 
       {
       this.totalBalance =  c.reduce(
         (accumulator, currentValue) => accumulator + currentValue.balance,
         0
       );
-    });
+    }, error: () => Notify.failure("Could not connect to server")});
   }
 
   getNumberOfCustomers()
   {
-    this.customersService.getAllCustomers().subscribe(c => this.numberOfCustomers = c.length);
+    this.customersService.getAllCustomers().subscribe({next: c => this.numberOfCustomers = c.length, error: () => Notify.failure("Could not connect to server")});
   }
 
 
