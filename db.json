@@ -28,7 +28,7 @@
       "email": "bstothard3@theatlantic.com",
       "address": "58 Pleasure Point",
       "accountType": "Savings",
-      "balance": 50
+      "balance": 500000
     },
     {
       "id": "0074b69f-911e-4c79-b8bb-dbac982f5e1f",
@@ -94,11 +94,11 @@
       "id": "6ac848d6-05bf-4e69-ad67-86534107247c",
       "firstName": "Lance",
       "lastName": "Lynock",
-      "email": "llynocka@time.com",
       "gender": "Male",
+      "email": "llynocka@time.com",
       "address": "807 Montana Way",
       "accountType": "Savings",
-      "balance": 0
+      "balance": 1000000
     },
     {
       "id": "6898a1b5-a105-4eb1-a5a6-c8307c969677",
@@ -154,11 +154,11 @@
       "id": "ef2c4d4d-4b33-46e5-8e8e-cd12296ac14c",
       "firstName": "Mariya",
       "lastName": "Keitley",
-      "email": "mkeitleyg@godaddy.com",
       "gender": "Female",
+      "email": "mkeitleyg@godaddy.com",
       "address": "9445 Mandrake Way",
       "accountType": "Savings",
-      "balance": 0
+      "balance": 1000
     },
     {
       "id": "bf96a22e-ab77-4fed-9eb0-221ceba9f4ae",

@@ -1,7 +1,7 @@
 <div
-  class="min-w-fit w-1/2 mx-auto mt-10 border-gray-500 p-5 flex-wrap shadow-lg rounded-md h-fit bg-white flex"
+  class="min-w-fit w-1/2 border mx-auto mt-10 border-gray-100 p-5 flex-wrap shadow-lg rounded-md h-fit bg-white flex"
 >
-  <div class="w-32 h-32 rounded-full overflow-hidden mr-10">
+  <div class="w-32 h-32 border rounded-full overflow-hidden mr-10">
     <img
       class="w-32 h-32"
       *ngIf="customer?.gender == 'Male'"
@@ -25,7 +25,7 @@
     <div class="flex justify-start w-52 mt-5">
       <button
         routerLink="/edit/{{ customer?.id }}"
-        class="py-1 px-4 mr-4 hover:bg-green-500 transition-all bg-green-600 rounded-md text-white"
+        class="py-1 px-4 mr-2 hover:bg-green-500 transition-all bg-green-600 rounded-md text-white"
       >
         Edit
       </button>
